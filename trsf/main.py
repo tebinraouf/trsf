@@ -21,7 +21,7 @@ def analyze_error_with_groq(error_message: str) -> str:
             messages=[
                 {
                     "role": "user",
-                    "content": f"Error: {error_message}\nPlease provide a suggestion to fix this issue.",
+                    "content": f"Error: {error_message}\n Please provide a suggestion to fix this issue.",
                 }
             ],
             model="llama-3.3-70b-versatile",

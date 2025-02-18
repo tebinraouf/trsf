@@ -30,19 +30,7 @@ build-backend = "setuptools.build_meta"
 
 [dependency-groups]
 dev = [
-    "autopep8>=2.3.2",
-    "black>=25.1.0",
-    "flake8>=7.1.2",
-    "isort>=6.0.0",
+    "ruff>=0.9.6",
 ]
-
-[tool.black]
-line-length = 88
-target-version = ['py311']
-include = '\.pyi?$'
-
-[tool.isort]
-profile = "black"
-multi_line_output = 3
 
 
