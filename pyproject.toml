@@ -1,0 +1,28 @@
+[project]
+name = "trsf"
+version = "0.1.0"
+description = "A tool to fix shell scripts"
+authors = [
+    {name = "Tebin Raouf", email = "tebin.raouf@gmail.com"},
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "groq>=0.18.0",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.3",
+    "typer>=0.15.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.3.1",
+]
+
+[project.scripts]
+trsf = "trsf.main:main"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
