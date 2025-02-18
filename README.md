@@ -46,7 +46,7 @@ cd trsf
 2. Create a virtual environment
 
 ```bash
-python -m venv venv
+uv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
@@ -54,6 +54,18 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 ```bash
 uv pip install -e ".[dev]"
+```
+
+4. Install the CLI for local development
+
+```bash
+uv tool install . -e
+```
+
+5. Optional (Uninstall)
+
+```bash
+uv tool uninstall trsf
 ```
 
 ## Contributing
