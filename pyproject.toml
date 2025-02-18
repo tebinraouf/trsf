@@ -22,7 +22,6 @@ dev = [
 
 [project.scripts]
 trsf = "trsf.main:main"
-format = "trsf.format:main"
 
 [build-system]
 requires = ["setuptools>=42", "wheel"]

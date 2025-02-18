@@ -40,3 +40,11 @@ jobs:
       - name: Test with pytest
         run: |
           uv run pytest
+
+      - name: Install CLI #this step is to verify if it can install
+        run: |
+          uv tool install . -e
+      
+      - name: Uninstall CLI #this step is to verify if it can uninstall
+        run: |
+          uv tool uninstall trsf
