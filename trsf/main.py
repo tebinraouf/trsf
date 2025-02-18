@@ -5,13 +5,14 @@ import shlex
 import typer
 from groq import Groq
 
-#Load ENV variables
+# Load ENV variables
 load_dotenv()
 
 app = typer.Typer()
 
 # Initialize Groq client using the API key from environment variables
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+
 
 def analyze_error_with_groq(error_message: str) -> str:
     """Send the error message to Groq API and retrieve a suggestion."""
@@ -28,6 +29,7 @@ def analyze_error_with_groq(error_message: str) -> str:
         return response.choices[0].message.content.strip()
     except Exception as e:
         return f"Failed to get a suggestion from Groq: {e}"
+
 
 @app.command()
 def trsf():
@@ -53,10 +55,12 @@ def trsf():
             print("\nExiting...")
             break
 
+
 @app.command()
 def main():
     typer.echo("TRSF is running!!")
     trsf()
+
 
 if __name__ == "__main__":
     app()
